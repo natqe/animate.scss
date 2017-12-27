@@ -1,0 +1,25 @@
+@charset 'utf-8';
+@import 'animate-animations', 
+              'animate-classes';
+@include kf-fadeIn;
+@include kf-fadeInDown;
+@include kf-fadeInLeft;
+@include kf-fadeInRight;
+@include kf-flip;
+@include kf-slideText;
+
+.my-class {
+  @extend %animated, %fadeIn;
+}
+#my-id {
+  @extend %animated, %fadeInDown, %infinite;
+}
+
+h1 {
+  @extend %animated, %fadeInLeft;
+  @include delay(3s);
+  @include iteration(5);
+  @include duration(2s);
+}
+
+
